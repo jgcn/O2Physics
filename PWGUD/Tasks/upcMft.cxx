@@ -75,6 +75,7 @@ struct UpcMftRec {
   // -- define histograms
   void init(o2::framework::InitContext&)
   {
+     LOG(info) << "Hello";
     // to access CCDB
     ccdb->setURL(ccdburl);
     ccdb->setCaching(true);
@@ -137,6 +138,7 @@ struct UpcMftRec {
                ExtBCs const& ebcs)
   {
 
+   
     std::map<int, BcTracks> bcGroups; // Map of tracks that belong to a given bunch crossing. One track can be associated with multiple BCs.
 
     initCCDB(ebcs.begin()); // Bz is needed for propagation
